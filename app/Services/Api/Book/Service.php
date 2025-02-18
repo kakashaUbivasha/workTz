@@ -11,4 +11,8 @@ class Service
         $books = Book::paginate($perPage);
         return $books;
     }
+    public function getBook($id){
+        $book = Book::find($id);
+        return $book;
+    }
 }

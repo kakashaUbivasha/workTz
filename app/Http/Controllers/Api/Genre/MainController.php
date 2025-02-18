@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Api\Book;
+namespace App\Http\Controllers\Api\Genre;
 
 use App\Http\Controllers\Controller;
-use App\Services\Api\Book\Service;
+use App\Services\Api\Genre\Service;
 use Illuminate\Http\Request;
 
 class MainController extends Controller

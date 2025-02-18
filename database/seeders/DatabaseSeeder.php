@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Book;
+use App\Models\Genre;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,5 +20,11 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        $genres = Genre::factory(10)->create();
+        $books = Book::factory(100)->create();
+        foreach ($books as $book) {
+            $genresId = $genres->pluck('id')->toArray();
+            $book->genres()->attach($genresId);
+        }
     }
 }
