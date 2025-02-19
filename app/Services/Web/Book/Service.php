@@ -27,4 +27,7 @@ class Service
         $book->update($data);
         $book->genres()->sync($genres);
     }
+    public function updateStatus($book){
+        $book->update(['status' => 1]);
+    }
 }

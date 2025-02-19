@@ -22,6 +22,7 @@ Route::post('/books', \App\Http\Controllers\Web\Book\StoreController::class)->na
 Route::get('/books/{book}', \App\Http\Controllers\Web\Book\ShowController::class)->name('books.show');
 Route::get('/books/{book}/edit', \App\Http\Controllers\Web\Book\EditController::class)->name('books.edit');
 Route::patch('/books/{book}', \App\Http\Controllers\Web\Book\UpdateController::class)->name('books.update');
+Route::patch('/books/published/{book}', \App\Http\Controllers\Web\Book\PublishedController::class)->name('books.status');
 Route::delete('/books/{book}', \App\Http\Controllers\Web\Book\DestroyController::class)->name('books.destroy');
 
 

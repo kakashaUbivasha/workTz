@@ -15,7 +15,7 @@
                          class="card-img-top" alt="Обложка книги" style="height: 250px; object-fit: cover;">
 
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title text-center">{{$book->id}}. {{$book->title}}</h5>
+                        <h5 class="card-title text-center">{{$book->title}}</h5>
                         <a class="btn btn-outline-primary mt-auto" href="{{route('books.show', $book->id)}}">Подробнее</a>
                     </div>
                 </div>

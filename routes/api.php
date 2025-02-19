@@ -20,6 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/books', \App\Http\Controllers\Api\Book\IndexController::class);
-Route::get('/books/{id}', App\Http\Controllers\Api\Book\ShowController::class);
+Route::get('/books/{book}', App\Http\Controllers\Api\Book\ShowController::class);
 Route::get('/genres', \App\Http\Controllers\Api\Genre\IndexController::class);
-Route::get('/genres/{id}',\App\Http\Controllers\Api\Genre\ShowController::class);
+Route::get('/genres/{genre}',\App\Http\Controllers\Api\Genre\ShowController::class);
