@@ -11,7 +11,6 @@ class Service
         if ($request->hasFile('cover')) {
             $data['cover'] = $request->file('cover')->store('covers', 'public');
         }
-
         $book = Book::create($data);
         $book->genres()->attach($data['genres']);
     }
